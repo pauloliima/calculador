@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculator en ligne | World Moving déménagement</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
+    <link rel="stylesheet" href="css/botaovalidar.css">
+    <script src='js/calculador.js'></script>
+
+</head>
+<body>
+    <header class="cabecalho">
+        <nav class="navegacao">
+            <a href="index.html">
+                <img alt="logo L.A Global" class="logo" src="img/logo 3.png" />
+            </a>
+            <a class="item-menu" href="sobre.html">Accueil</a>
+            <a class="item-menu" href="contato.html">A propos</a>
+            <a class="item-menu" href="contato.html">Services</a>
+            <a class="item-menu" href="contato.html">Devis</a>
+            <a class="item-menu" href="contato.html">Service Express</a>
+            <a class="item-menu" href="contato.html">Calculator en ligne</a>
+            <a class="item-menu" href="contato.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="'titulos">
+            
+            <h1>L.A GLOBAL, votre Déménageur Professionnel!</h1>
+            <h2>Calculez le volume à déménager</h2>
+                    
+        </div>
+
+        <div id="ex">
+
+            <p>
+                Cet inventaire vous permet de connaitre le volume à déménager. 
+                Si à la place vous préférez rencontrer notre agent chez vous, 
+                veuillez nous contacter.
+            </p>
+
+
+        </div>
+
+        <section class="salon">
+
+            <h3>
+                Sélectionnez les éléments que vous souhaitez déménager, 
+                le volume dont vous avez besoin s’affiche ci-dessous.
+            </h3>
+
+            <div class="multi-button">
+
+                <button><a href="index.html">SALON</a></button>
+                <button><a href="cuisine.html">CUISINE</a></button>
+                <button><a href="chambre.html">CHAMBRE</a></button>
+                <button><a href="bureau.html">BUREAU</a></button>
+                <button><a href="divers.html">DIVERS</a></button>
+                
+            </div>
+
+            <div id="comodos">
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>LIT 2 PLACES</h6>
+                        <img id="img" src="/img/chambre/LIT 2 PLACES.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="meubletv" min="0" name="meubletv" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>PENDERIE</h6>
+                        <img id="img" src="/img/chambre/PENDERIE1.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="tv" min="0" name="tv" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+                    
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>MIROIR (GLACE)</h6>
+                        <img id="img" src="/img/chambre/mirror.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="grandtv" min="0" name="grandtv" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>CHIFFONIER</h6>
+                        <img id="img" src="/img/chambre/chiffonier.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>BIBLIOTHÈQUE</h6>
+                        <img id="img" src="/img/chambre/bibliotheque.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>COMMODE</h6>
+                        <img id="img" src="/img/chambre/commode.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>ARMOIRE</h6>
+                        <img id="img" src="/img/chambre/ARMOIRE.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="canape3" min="0" name="canape3" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>CHEVET</h6>
+                        <img id="img" src="/img/chambre/chevet.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+                    
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>LIT SUPERPOSÉ</h6>
+                        <img id="img" src="/img/chambre/lit-superpose.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>MEZZANINE</h6>
+                        <img id="img" src="/img/chambre/mezzanine.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>LIT 1 PLACE</h6>
+                        <img id="img" src="/img/chambre/LIT 1 PLACE.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+                <article class="itens">
+
+                    <div class="imagem">
+                        <h6>SECRÉTAIRE</h6>
+                        <img id="img" src="/img/chambre/secretary.png">
+                    </div>
+
+                    <div class="number-input">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown(down())" class= "down"></button>
+                        <input class="valor" min="0" name="valor" value="0" type="number">
+                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp(up())" class="plus"></button>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <div id="texto">
+            <div id="titulo">
+                <h2>Comment ça marche ?</h2>
+            </div>
+        </div>
+        <div id="texto">
+
+            <p id="texto2">
+                Avec ce <b>calculateur de volume de déménagement</b>, vous allez pouvoir évaluer la contenance globale des affaires que vous devez déménager. Ceci vous sera très utile pour déterminer le modèle de camion le plus adapté à votre déménagement.
+
+                Le mobilier est réparti en 5 rubriques accessibles en cliquant sur les onglets « salon », « cuisine », « chambre », …. Un sixième onglet « autre » permet d’ajouter à votre guise des objets ne figurant pas dans les rubriques précédentes.
+                
+                Quand votre liste est finalisée, cliquez sur "Valider" et découvrez le véhicule de déménagement et le pack cartons qui correspondent à votre besoin. Il ne vous reste plus qu'à les commander.
+                
+                
+                A vous de jouer ! 
+            </br>
+            </br>
+            </br>
+            </br>
+            </p>
+
+        </div>    
+           
+    </main>
+
+    <footer class="rodape">
+
+        <div>
+            <div>
+                <h3>NB D'ÉLÉMENTS À DÉMÉNAGER:</h3>
+            </div>
+
+            <div id="qtde">
+
+            <h3 class="qtde">0</h6>
+
+            </div>
+
+            <div>
+                <h3>VOLUME TOTAL: </h3>
+            </div>
+
+            <h3 class="resultado">0</h6>
+
+            <div id="m">
+                <h3>M³</h3>
+            </div>
+
+            
+
+        </div>
+
+        <div class="box">
+            <a href="#" class="btn btn-white btn-animation-1">VALIDER</a> 
+        </div>
+
+    </footer>
+
+    
+</body>
+</html>
+
+<!--
+
+<div class="info">
+    <p> NB D'ÉLÉMENT À DÉMÉNAGER</p>
+    <P>VOLUME T0TAL</P>
+    <div class="total">
+        <p class="resultado">0</p>
+    </div>
+<div id="medida">
+    <p>m³</p>
+</div>
+
+-->
