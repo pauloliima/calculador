@@ -10,33 +10,21 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/button.css'>
     <link rel="stylesheet" href="css/botaovalidar.css">
-    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-
-    <!-- <script>
-        $(document).ready(function () {
-            $(".multi-button a").click(function (e) {
-                e.preventDefault();
-                var href = $(this).attr('href');
-                $("#comodos").load(href + " #comodos");
-            });
-        });
-    </script> -->
-
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="navegacao">
+    <header>
+        <nav>
             <a href="index.html">
-                <img alt="logo L.A Global" class="logo" src="img/logo 3.png" />
+                <img alt="logo L.A Global" src="img/logo 3.png" />
             </a>
-            <a class="item-menu" href="sobre.html">Accueil</a>
-            <a class="item-menu" href="contato.html">A propos</a>
-            <a class="item-menu" href="contato.html">Services</a>
-            <a class="item-menu" href="contato.html">Devis</a>
-            <a class="item-menu" href="contato.html">Service Express</a>
-            <a class="item-menu" href="contato.html">Calculator en ligne</a>
-            <a class="item-menu" href="contato.html">Contact</a>
+            <a href="sobre.html">Accueil</a>
+            <a href="contato.html">A propos</a>
+            <a href="contato.html">Services</a>
+            <a href="contato.html">Devis</a>
+            <a href="contato.html">Service Express</a>
+            <a href="contato.html">Calculator en ligne</a>
+            <a href="contato.html">Contact</a>
         </nav>
     </header>
 
@@ -47,44 +35,29 @@
         </div>
 
         <div id="ex">
-
             <p>
                 Cet inventaire vous permet de connaitre le volume à déménager.
                 Si à la place vous préférez rencontrer notre agent chez vous,
                 veuillez nous contacter.
             </p>
-
-
         </div>
 
-        <section class="itens0">
-
+        <section>
             <h3>
-                Sélectionnez les éléments que vous souhaitez déménager,
+                Sélectionnez les éléments que vous souhaitez déménager, 
                 le volume dont vous avez besoin s’affiche ci-dessous.
             </h3>
-
-            <div class="multi-button">
-
-                <!-- <button><a id="link" href="index.html">SALON</a></button>
-                <button><a id="link" href="./cuisine.html">CUISINE</a></button>
-                <button><a id="link" href="./chambre.html">CHAMBRE</a></button>
-                <button><a id="link" href="./bureau.html">BUREAU</a></button>
-                <button><a id="link" href="./divers.html">DIVERS</a></button> -->
-
-            </div>
-
+            <div class="multi-button"></div>
             <div id="comodos">
             </div>
-
         </section>
 
-        <div id="texto">
+        <div class="texto">
             <div id="titulo">
                 <h2>Comment ça marche ?</h2>
             </div>
         </div>
-        <div id="texto">
+        <div class="texto">
 
             <p id="texto2">
                 Avec ce <b>calculateur de volume de déménagement</b>, vous allez pouvoir évaluer la contenance
@@ -105,10 +78,7 @@
 
 
                 A vous de jouer !
-                </br>
-                </br>
-                </br>
-                </br>
+
             </p>
 
         </div>
@@ -118,25 +88,16 @@
     <footer class="rodape">
 
         <div>
-
             <div>
-                <h3>NB D'ÉLÉMENTS À DÉMÉNAGER:</h3>
-            </div>
-
-            <div id="qtde">
-
-                <h3 class="qtde">0</h6>
-
+                <h3>NB D'ÉLÉMENTS À DÉMÉNAGER:
+                    <h3 class="qtde">0</h3>
+                </h3>
             </div>
 
             <div>
-                <h3>VOLUME TOTAL:&nbsp;</h3>
-            </div>
-
-            <h3 id="result">0</h3>
-
-            <div id="m">
-                <h3>M³</h3>
+                <h3>VOLUME TOTAL:&nbsp;<h3 id="result">0</h3>
+                    <h3>m³</h3>
+                </h3>
             </div>
 
         </div>
@@ -151,17 +112,3 @@
 </body>
 
 </html>
-
-<!--
-
-<div class="info">
-    <p> NB D'ÉLÉMENT À DÉMÉNAGER</p>
-    <P>VOLUME T0TAL</P>
-    <div class="total">
-        <p class="resultado">0</p>
-    </div>
-<div id="medida">
-    <p>m³</p>
-</div>
-
--->
