@@ -1,4 +1,4 @@
-
+// os cômodos e seus itens
 var comodos = {
     salon: [
         { name: "Meuble TV", imgSrc: "meubles-tv.png", value: 1, amount: 0 },
@@ -73,16 +73,21 @@ var comodos = {
     ]
 }
 
-var comodosNames = Object.keys(comodos);
-var currentComodo = comodosNames[0];
-var inputs;
+var comodosNames = Object.keys(comodos); // o nome dos cômodos ['salon', 'cuisine'...]
+var currentComodo = comodosNames[0]; // o cômodo atual
+var inputs; // os <inputs> dos itens no HTML
 
+/** 
+ * Adiciona 1 à quantidade do item clicado 
+ * @param {number} idx - O índice do item em seu cômodo
+ */
 function plus(idx) {
     let item = this.comodos[currentComodo][idx];
     item.amount = Number((item.amount + 1).toFixed(1));
     this.change(idx);
 }
 
+/** Diminui em 1 a quantidade do item clicado, se este for maior que 0 */
 function down(idx) {
     let item = this.comodos[currentComodo][idx];
     if (item.amount > 0) {
@@ -91,6 +96,14 @@ function down(idx) {
     this.change(idx);
 }
 
+/** Atualiza inputs na tela */
+function change(idx) {
+    let input = this.inputs.item(idx)
+    input.value = comodos[currentComodo][idx].amount;
+    this.calc();
+}
+
+/** Calcula volume total dos itens e atualiza o resultado no html */
 function calc() {
     var soma = 0;
     for (const comodo of comodosNames) {
@@ -101,42 +114,45 @@ function calc() {
     document.getElementById('result').innerHTML = soma;
 }
 
-function change(idx) {
-    let input = this.inputs.item(idx)
-    input.value = comodos[currentComodo][idx].amount;
-    this.calc();
-}
 
+/** 
+ * cria os itens de acordo com a navegação atual
+ * @param {string} comodo - A navegação atual
+ */
 function createElements(comodo) {
     this.currentComodo = comodo;
-    document.getElementById('comodos').innerHTML = "";
+    document.getElementById('comodos').innerHTML = ""; // remove todos os itens do html
     for (const item of this.comodos[currentComodo]) {
+        // item a ser mostrado na tela
         const idx = this.comodos[currentComodo].indexOf(item);
 
-
+        // conteiner para o item
         let article = document.createElement("article");
         article.classList.add('itens');
 
+        // div da imagem e nome do item
         let imgDiv = document.createElement("div");
         imgDiv.classList.add('imagem');
 
+        // Nome do item
         let imgTitle = document.createElement("h6");
         imgTitle.innerHTML = item.name.toUpperCase();
 
+        // imagem do item
         let img = document.createElement("img");
         img.id = 'img';
-        img.src = `./img/${comodo}/${item.imgSrc}`;
-        imgDiv.appendChild(imgTitle);
-        imgDiv.appendChild(img);
-        article.appendChild(imgDiv);
+        img.src = `./img/${comodo}/${item.imgSrc}`;        
 
+        // div de input e botões
         let numberDiv = document.createElement("div");
         numberDiv.classList.add("number-input");
 
+        // botão down
         let down = document.createElement("button");
         down.setAttribute("onclick", `down(${idx})`);
         down.classList.add('down');
 
+        // input de quantidade
         let input = document.createElement('input');
         input.setAttribute("onchange", `change(${idx})`)
         input.setAttribute("min", "0")
@@ -145,23 +161,26 @@ function createElements(comodo) {
         input.setAttribute("value", item.amount)
         input.classList.add("valor")
 
+        // botão plus
         let plus = document.createElement("button");
         plus.setAttribute("onclick", `plus(${idx})`);
         plus.classList.add('plus');
 
+        // montando html
+        imgDiv.appendChild(imgTitle);
+        imgDiv.appendChild(img);
+        article.appendChild(imgDiv);
         numberDiv.appendChild(down)
         numberDiv.appendChild(input)
         numberDiv.appendChild(plus)
         article.appendChild(numberDiv);
-
         document.getElementById('comodos').appendChild(article);
     }
-
-
-
     this.inputs = document.getElementsByClassName('valor');
 }
 
+
+/** Cria os botãoes de navegação */
 function createButtons() {
     let container = document.getElementsByClassName('multi-button')[0];
     for (const comodo of comodosNames) {
