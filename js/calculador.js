@@ -105,13 +105,17 @@ function change(idx) {
 
 /** Calcula volume total dos itens e atualiza o resultado no html */
 function calc() {
-    var soma = 0;
+    let qtde = 0;
+    let m3 = 0;
+
     for (const comodo of comodosNames) {
         for (const item of this.comodos[comodo]) {
-            soma = Number((soma + (item.value * item.amount)).toFixed(1));
+            qtde += item.amount;
+            m3 = Number((m3 + (item.value * item.amount)).toFixed(1));
         }
     }
-    document.getElementById('result').innerHTML = soma;
+    document.getElementById('qtde').innerHTML = qtde;
+    document.getElementById('result').innerHTML = m3;
 }
 
 
