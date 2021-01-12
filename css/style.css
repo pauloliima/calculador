@@ -114,6 +114,7 @@ article {
   padding-bottom: 10px;
   text-align: center;
   min-width: 260px;
+  transition: transform ease-in-out 500ms;
 }
 
 .imagem img#img {
@@ -243,12 +244,6 @@ footer div#m {
   color: orangered;
 }
 
-footer > div {
-  display: flex;
-  justify-content: end;
-  /* margin-left: 200px; */
-  color: #000000;
-}
 
 #link {
   display: flex;

@@ -1,7 +1,7 @@
 .box {
   position: absolute;
   bottom: 81px;
-  right: 10px;
+  right: 16px;
   transform: translate(-0%, 50%);
 }
 
@@ -21,12 +21,13 @@
   padding: 10px 60px;
   border-radius: 0px;
   display: inline-block;
-  transition: all 0.5s;
+  transition: all 0.1s;
 }
 
 .btn-white {
-  background: rgb(0, 0, 0);
+  background: #333333;
   color: orangered;
+  filter: drop-shadow(4px 6px 6px #222222);
 }
 
 .btn:hover {
@@ -59,7 +60,7 @@
 }
 
 .btn-white::after {
-  background: rgb(0, 0, 0);
+  background: #333333;
 }
 
 .btn-animation-1:hover::after {
