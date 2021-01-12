@@ -105,13 +105,17 @@ function change(idx) {
 
 /** Calcula volume total dos itens e atualiza o resultado no html */
 function calc() {
-    var soma = 0;
+    let qtde = 0;
+    let m3 = 0;
+
     for (const comodo of comodosNames) {
         for (const item of this.comodos[comodo]) {
-            soma = Number((soma + (item.value * item.amount)).toFixed(1));
+            qtde += item.amount;
+            m3 = Number((m3 + (item.value * item.amount)).toFixed(1));
         }
     }
-    document.getElementById('result').innerHTML = soma;
+    document.getElementById('qtde').innerHTML = qtde;
+    document.getElementById('result').innerHTML = m3;
 }
 
 
@@ -121,68 +125,81 @@ function calc() {
  */
 function createElements(comodo) {
     this.currentComodo = comodo;
-    document.getElementById('comodos').innerHTML = ""; // remove todos os itens do html
-    for (const item of this.comodos[currentComodo]) {
-        // item a ser mostrado na tela
-        const idx = this.comodos[currentComodo].indexOf(item);
-
-        // conteiner para o item
-        let article = document.createElement("article");
-        article.classList.add('itens');
-
-        // div da imagem e nome do item
-        let imgDiv = document.createElement("div");
-        imgDiv.classList.add('imagem');
-
-        // Nome do item
-        let imgTitle = document.createElement("h6");
-        imgTitle.innerHTML = item.name.toUpperCase();
-
-        // imagem do item
-        let img = document.createElement("img");
-        img.id = 'img';
-        img.src = `./img/${comodo}/${item.imgSrc}`;        
-
-        // div de input e botões
-        let numberDiv = document.createElement("div");
-        numberDiv.classList.add("number-input");
-
-        // botão down
-        let down = document.createElement("button");
-        down.setAttribute("onclick", `down(${idx})`);
-        down.classList.add('down');
-
-        // input de quantidade
-        let input = document.createElement('input');
-        input.setAttribute("onchange", `change(${idx})`)
-        input.setAttribute("min", "0")
-        input.setAttribute("name", `valor${idx + 1}`)
-        input.setAttribute("type", "number")
-        input.setAttribute("value", item.amount)
-        input.classList.add("valor")
-
-        // botão plus
-        let plus = document.createElement("button");
-        plus.setAttribute("onclick", `plus(${idx})`);
-        plus.classList.add('plus');
-
-        // montando html
-        imgDiv.appendChild(imgTitle);
-        imgDiv.appendChild(img);
-        article.appendChild(imgDiv);
-        numberDiv.appendChild(down)
-        numberDiv.appendChild(input)
-        numberDiv.appendChild(plus)
-        article.appendChild(numberDiv);
-        document.getElementById('comodos').appendChild(article);
+    setActiveButton();
+    let cm = document.getElementById('comodos');
+    for (let i = 0; i < cm.children.length; i++) {
+        cm.children.item(i).style.transform = 'rotateY(-90deg)'; // flip animation out
     }
-    this.inputs = document.getElementsByClassName('valor');
+    setTimeout(() => {
+        cm.innerHTML = "";
+
+        for (const item of this.comodos[currentComodo]) {
+            // item a ser mostrado na tela
+            const idx = this.comodos[currentComodo].indexOf(item);
+
+            // conteiner para o item
+            let article = document.createElement("article");
+            article.style.transform = 'rotateY(-90deg)';
+            article.classList.add('itens');
+
+            // div da imagem e nome do item
+            let imgDiv = document.createElement("div");
+            imgDiv.classList.add('imagem');
+
+            // Nome do item
+            let imgTitle = document.createElement("h6");
+            imgTitle.innerHTML = item.name.toUpperCase();
+
+            // imagem do item
+            let img = document.createElement("img");
+            img.id = 'img';
+            img.src = `./img/${comodo}/${item.imgSrc}`;
+
+            // div de input e botões
+            let numberDiv = document.createElement("div");
+            numberDiv.classList.add("number-input");
+
+            // botão down
+            let down = document.createElement("button");
+            down.setAttribute("onclick", `down(${idx})`);
+            down.classList.add('down');
+
+            // input de quantidade
+            let input = document.createElement('input');
+            input.setAttribute("onchange", `change(${idx})`)
+            input.setAttribute("min", "0")
+            input.setAttribute("name", `valor${idx + 1}`)
+            input.setAttribute("type", "number")
+            input.setAttribute("value", item.amount)
+            input.classList.add("valor")
+
+            // botão plus
+            let plus = document.createElement("button");
+            plus.setAttribute("onclick", `plus(${idx})`);
+            plus.classList.add('plus');
+
+            // montando html
+            imgDiv.appendChild(imgTitle);
+            imgDiv.appendChild(img);
+            article.appendChild(imgDiv);
+            numberDiv.appendChild(down)
+            numberDiv.appendChild(input)
+            numberDiv.appendChild(plus)
+            article.appendChild(numberDiv);
+            cm.appendChild(article);
+            setTimeout(() => {
+                article.style.transform = 'none'; // flip animation in
+            }, 100);
+        }
+        this.inputs = document.getElementsByClassName('valor');
+    }, 500);
 }
 
 
 /** Cria os botãoes de navegação */
 function createButtons() {
     let container = document.getElementsByClassName('multi-button')[0];
+    container.innerHTML = "";
     for (const comodo of comodosNames) {
         let button = document.createElement('button');
         button.setAttribute("onclick", `createElements('${comodo}')`);
@@ -191,6 +208,18 @@ function createButtons() {
         a.innerHTML = comodo.toUpperCase();
         button.appendChild(a);
         container.appendChild(button);
+    }
+    setActiveButton();
+}
+
+function setActiveButton() {
+    let buttons = document.getElementsByClassName('multi-button')[0].children;
+    for (const button of buttons) {
+        if (buttons.item(comodosNames.indexOf(currentComodo)) == button) {
+            button.classList.add('selected');
+        } else {
+            button.classList.remove('selected');
+        }
     }
 }
 
