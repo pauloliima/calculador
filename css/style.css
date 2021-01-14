@@ -71,7 +71,7 @@ a img {
 
 h1,
 h2,
-p {
+p#p1 {
   text-align: center;
 }
 
@@ -100,6 +100,7 @@ section {
 
 section h3 {
   padding: 0 10px;
+  text-align: center;
 }
 
 #comodos {
@@ -203,7 +204,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 #titulo {
   display: flex;
-  color: orangered;
+  color:orangered;
 }
 
 footer {
@@ -212,18 +213,18 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 81px;
+  height: 50px;
   align-items: center;
 }
-footer > div:first-of-type {
+footer > div:first-of-type { /*Texto rodapé*/
   display: flex;
   justify-content: space-around;
 
   /* position: relative; */
   /* margin-left: 7px; */
   /* margin-top: -7px; */
-  color: #555555;
-  font-size: 20px;
+  color: #636363;
+  font-size: 15px;
   flex: 4;
 }
 
@@ -245,10 +246,10 @@ footer div#m {
 }
 
 
-#link {
+#link { /* botões de navegção */
   display: flex;
   width: 200px;
-  height: 35px;
+  height: 25px;
   align-items: center;
   justify-content: center;
 }
