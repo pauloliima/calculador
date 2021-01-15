@@ -86,8 +86,8 @@
 
 #poupup {
   border-radius: 10px;
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  margin-top: 3%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 600px;
@@ -138,7 +138,7 @@ form input {
 .btn-box {
   width: 100%;
   margin: 30px;
-  text-align: center;
+  text-align: right;
 }
 
 form button{
