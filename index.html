@@ -32,25 +32,29 @@
         <div>
 
             <a href="#" onclick="toggle()">X</a>
-           <form action="" method="">
 
+           <form action="" method="">
+               
                 <h3> Demande de devis</h3>
 
-                <div class="textos">
-                    <h3>NB D'ÉLÉMENTS À DÉMÉNAGER:
-                        <h3 id="qtdeform">0</h3>
-                    </h3>
-                </div></br>
-    
-                <div class="vv">
-                    <h3>VOLUME TOTAL:
-                        <h3 id="resultform">0</h3>
-                    </h3>
+                <div id="valores">
+                    <div class="textos">
+                        <span>NB D'ÉLÉMENTS À DÉMÉNAGER:
+                            <span id="qtdeform">0</span>
+                        </span>
+                    </div>
+        
+                    <div class="vv">
+                        <span>VOLUME TOTAL:
+                            <span id="resultform">0</span>
+                            <span>m³</span>
+                        </span>
+                    </div>
                 </div>
 
                 <input type="text" placeholder="Nom" required>
                 <input type="text" placeholder="Téléphone">
-                <input type="text" placeholder="Email" required>
+                <input type="email" placeholder="Email" required>
                 <input type="text" placeholder="Adresse de départ" required>
                 <input type="text" placeholder="Adresse d'arrivée" required>
                 
@@ -58,6 +62,7 @@
                 <div class="btn-box" >
                     <button type="submit">Envoyer</button>
                 </div>
+
            </form>
             
         </div>

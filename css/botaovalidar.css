@@ -121,6 +121,7 @@
 #poupup form {
   width: 480px;
   left: 40px;
+  margin: auto;
 
 }
 
@@ -152,12 +153,12 @@ form button{
   cursor: pointer;
 }
 
-.textos {
-  display: inline-flex;
-  color: #ff105f;
-}
-
-.vv {
-  display: inline-flex;
-  color: #ff105f;
+#valores{
+  Width:100%;
+  Display: flex;
+  flex-direction: column;
+  Justify-content: space-between;
+  color: #777;
+  font-style: oblique;
+  font-weight: 600;
 }
