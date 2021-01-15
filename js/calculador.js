@@ -119,6 +119,7 @@ function calc() {
     document.getElementById('result').innerHTML = m3;
     document.getElementById('qtdeform').innerHTML = qtde;
     document.getElementById('resultform').innerHTML = m3;
+    document.getElementById('teste').innerHTML = qtde;
 }
 
 
