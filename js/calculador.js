@@ -116,10 +116,11 @@ function calc() {
         }
     }
     document.getElementById('qtde').innerHTML = qtde;
-    document.getElementById('result').innerHTML = m3;
     document.getElementById('qtdeform').innerHTML = qtde;
+    document.getElementById('qtdeSpan').innerHTML = qtde;
+    document.getElementById('result').innerHTML = m3;
     document.getElementById('resultform').innerHTML = m3;
-    document.getElementById('teste').innerHTML = qtde;
+    document.getElementById('resultSpan').innerHTML = m3;
 }
 
 

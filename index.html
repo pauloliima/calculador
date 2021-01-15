@@ -42,13 +42,13 @@
                 <div id="valores">
                     <div class="textos">
                         <span>NB D'ÉLÉMENTS À DÉMÉNAGER:
-                            <span id="qtdeform" name="qtde" >0</span>
+                            <span id="qtdeSpan">0</span>
                         </span>
                     </div>
         
                     <div class="vv">
                         <span>VOLUME TOTAL:
-                            <span id="resultform" name="result" >0</span>
+                            <span id="resultSpan">0</span>
                             <span>m³</span>
                         </span>
                     </div>
@@ -66,7 +66,9 @@
                 <input id="poupup-endereco2" type="text" name="adresse2" placeholder="Adresse d'arrivée" required maxlength="40">
                 <label for="poupup-data"></label>
                 <input type="date" name="data" id="poupup-data" name="date" placeholder="date du déménagement">
-                <input type="text" id="teste" name="teste" >
+                
+                <input type="text" id="qtdeForm" name="qtdeForm" disabled hidden>
+                <input type="text" id="resultForm" name="resultForm" disabled hidden>
 
                 <div class="btn-box" >
                     <button type="submit">Envoyer</button>
