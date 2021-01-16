@@ -101,6 +101,7 @@
   
 }
 
+
 #poupup.active {
   top: 50%;
   visibility: visible;
@@ -162,3 +163,49 @@ form button{
   font-style: oblique;
   font-weight: 600;
 }
+
+@media screen and (max-width: 600px) {
+
+  #poupup {
+    width: 380px;
+  }
+
+  #poupup form {
+   width: 240px;
+  }
+ 
+  #valores{
+   font-size: small;
+  } 
+
+  #x {
+    color: #ff105f;
+    margin-right: -180px;
+  }
+
+  footer {
+    height: 100px;
+  }
+
+  footer div {
+    width: 100%;
+    Display: flex;
+    flex-direction: row;
+    Justify-content: space-between;
+    color: #777;
+    font-style: oblique;
+    font-weight: 600;
+  }
+
+  footer div.box{
+    Display: flex;
+    flex-direction: column;
+    Justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  #texto2 {
+    margin-bottom: 100px;
+  }
+}
+ 

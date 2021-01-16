@@ -17,14 +17,17 @@
 <body>
     <header>
         <nav>
-            <a href="index.html">
+            <a href="https://worldmoving.ch/">
                 <img alt="logo L.A Global" src="img/logo 3.png" />
             </a>
+
+            <img id="img-menu" src="img/menu/menu.png" onclick="togleMenu()">
+
             <a href="https://worldmoving.ch/">Accueil</a>
             <a href="https://worldmoving.ch/#apropos">A propos</a>
             <a href="https://worldmoving.ch/#services">Services</a>
             <a href="https://worldmoving.ch/devis/">Devis</a>
-            <a href="contato.html">Calculator en ligne</a>
+            <a href="https://calculateur.worldmoving.ch">Calculator en ligne</a>
             <a href="https://worldmoving.ch/#contact">Contact</a>
         </nav>
     </header>
@@ -32,54 +35,55 @@
     <div id="poupup">
         <div>
 
-            <a href="#" onclick="toggle()">X</a>
+            <a id="x" href="#" onclick="toggle()">X</a>
 
-           <form action="envia_fale.php" method="POST" name="form">
-            <input type="hidden" name="accessKey" value="3caff910-b1c1-46f0-afa4-0c7322842315">
-               
-                <h3> Demande de devis</h3>
-
-                <div id="valores">
-                    <div class="textos">
-                        <span>NB D'ÉLÉMENTS À DÉMÉNAGER:
-                            <span id="qtdeSpan">0</span>
-                        </span>
-                    </div>
-        
-                    <div class="vv">
-                        <span>VOLUME TOTAL:
-                            <span id="resultSpan">0</span>
-                            <span>m³</span>
-                        </span>
-                    </div>
-                </div>
+            <form action="envia_fale.php" method="POST" name="form">
                 
-                <label for="poupup-nom"></label>
-                <input id="poupup-nom"  type="text" name="nom" placeholder="Nom" required autofocus maxlength="40">
-                <label for="poupup-telefone"></label>
-                <input id="poupup-telefone" type="tel" name="telephone" placeholder="Téléphone" maxlength="14">
-                <label for="poupup-email"></label>
-                <input id="poupup-email" type="email" name="email" placeholder="Email" required maxlength="30">
-                <label for="poupup-endereco1"></label>
-                <input id="poupup-endereco1" type="text" name="adresse1" placeholder="Adresse de départ" required maxlength="40">
-                <label for="poupup-endereco2"></label>
-                <input id="poupup-endereco2" type="text" name="adresse2" placeholder="Adresse d'arrivée" required maxlength="40">
-                <label for="poupup-data"></label>
-                <input type="date" name="data" id="poupup-data" name="date" placeholder="date du déménagement">
-                
-                <input type="text" id="qtdeForm" name="qtdeForm" disabled hidden>
-                <input type="text" id="resultForm" name="resultForm" disabled hidden>
+                    <h3> Demande de devis</h3>
 
-                <div class="btn-box" >
-                    <button type="submit">Envoyer</button>
-                </div>
-
-           </form>
+                    <div id="valores">
+                        <div class="textos">
+                            <span>NB D'ÉLÉMENTS À DÉMÉNAGER:
+                                <span id="qtdeSpan">0</span>
+                            </span>
+                        </div>
             
+                        <div class="vv">
+                            <span>VOLUME TOTAL:
+                                <span id="resultSpan">0</span>
+                                <span>m³</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <label for="poupup-nom"></label>
+                    <input id="poupup-nom"  type="text" name="nom" placeholder="Nom" required autofocus maxlength="40">
+                    <label for="poupup-telefone"></label>
+                    <input id="poupup-telefone" type="tel" name="telephone" placeholder="Téléphone" maxlength="14">
+                    <label for="poupup-email"></label>
+                    <input id="poupup-email" type="email" name="email" placeholder="Email" required maxlength="30">
+                    <label for="poupup-endereco1"></label>
+                    <input id="poupup-endereco1" type="text" name="adresse1" placeholder="Adresse de départ" required maxlength="40">
+                    <label for="poupup-endereco2"></label>
+                    <input id="poupup-endereco2" type="text" name="adresse2" placeholder="Adresse d'arrivée" required maxlength="40">
+                    <label for="poupup-data"></label>
+                    <input type="date" name="data" id="poupup-data" name="date" placeholder="date du déménagement">
+                    
+                    <input type="number" id="qtdeForm" name="qtdeForm" placeholder="Tapez le nb d'éléments a déménager">
+                    <input type="number" id="resultForm" name="resultForm" placeholder="Tapez le volume total">
+
+                    <div class="btn-box" >
+                        <button onclick="log($event)" type="submit">Envoyer</button>
+                    </div>
+
+            </form>
+                
         </div>
     </div>
 
     <main id="area">
+
+        <div>
 
         <div class="'titulos">
             <h1><span style="color: orangered;">WORLD MOVING</span>, déménagez avec des professionnels!</h1>
@@ -92,6 +96,7 @@
                 Si à la place vous préférez rencontrer notre agent chez vous,
                 veuillez nous contacter.
             </p>
+        </div>
         </div>
 
         <section>
@@ -112,24 +117,16 @@
         <div class="texto">
 
             <p id="texto2">
-                Avec ce <b>calculateur de volume de déménagement</b>, vous allez pouvoir évaluer la contenance
+                vec ce <b>calculateur de volume de déménagement</b>, vous allez pouvoir évaluer la contenance
                 globale
                 des affaires que vous devez déménager. Ceci vous sera très utile pour déterminer le modèle de camion
                 le
                 plus adapté à votre déménagement.
 
                 Le mobilier est réparti en 5 rubriques accessibles en cliquant sur les onglets « salon », « cuisine
-                », «
-                chambre », …. Un sixième onglet « autre » permet d’ajouter à votre guise des objets ne figurant pas
-                dans
-                les rubriques précédentes.
+                », « chambre », « bureau » et « divers ».
 
-                Quand votre liste est finalisée, cliquez sur "Valider" et découvrez le véhicule de déménagement et
-                le
-                pack cartons qui correspondent à votre besoin. Il ne vous reste plus qu'à les commander.
-
-
-                A vous de jouer !
+                Quand votre liste est finalisée, cliquez sur "Valider" pour envoyer un formulaire avec les informations.
 
             </p>
 

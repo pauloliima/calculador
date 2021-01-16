@@ -41,6 +41,10 @@ header {
   box-shadow: 0px 1px 10px grey;
 }
 
+header #img-menu {
+  display: none;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -253,3 +257,22 @@ footer div#m {
   align-items: center;
   justify-content: center;
 }
+
+nav .expandido { height: auto; }
+nav .recolhido { height: 0; }
+ 
+@media screen and (max-width: 600px) {
+
+     header #img-menu {
+      width: 30px;
+      display: initial;
+      margin-top: 20px;
+    }
+
+    a {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+ }
+ 

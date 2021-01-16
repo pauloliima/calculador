@@ -65,7 +65,7 @@ var comodos = {
         { name: "CD, DVD", imgSrc: "cddvd.png", value: 0.1, amount: 0 },
         { name: "Miroirs", imgSrc: "mirrors.png", value: 0.1, amount: 0 },
         { name: "Lampe", imgSrc: "lampe.png", value: 0.1, amount: 0 },
-        { name: "Établi", imgSrc: "Établi.png", value: 1.5, amount: 0 },
+        { name: "Établi", imgSrc: "ETABLI.png", value: 1.5, amount: 0 },
         { name: "Chaise de jardin", imgSrc: "CHAISE DE JARDIN.png", value: 0.4, amount: 0 },
         { name: "Poussette de bebe", imgSrc: "poussette-de-bebe.png", value: 0.8, amount: 0 },
         { name: "Tondeuse a gazon", imgSrc: "tondeuse-a-gazon.png", value: 0.3, amount: 0 },
@@ -116,10 +116,10 @@ function calc() {
         }
     }
     document.getElementById('qtde').innerHTML = qtde;
-    document.getElementById('qtdeform').innerHTML = qtde;
+    document.getElementById('qtdeForm').innerHTML = qtde;
     document.getElementById('qtdeSpan').innerHTML = qtde;
     document.getElementById('result').innerHTML = m3;
-    document.getElementById('resultform').innerHTML = m3;
+    document.getElementById('resultForm').innerHTML = m3;
     document.getElementById('resultSpan').innerHTML = m3;
 }
 
@@ -239,4 +239,24 @@ function toggle(){
     blur.classList.toggle('active');
     let poupup = document.getElementById('poupup');
     poupup.classList.toggle('active');
+}
+
+
+function log(e){ 
+    console.log(document.getElementsByTagName('form')[0])
+}
+
+var expandido = false;
+
+function togleMenu(){
+
+    let nav = document.getElementsByTagName('nav')[0];
+
+    if(expandido){
+        nav.classlist.add('expandido');
+        nav.classlist.remove('recolhido');
+    } else {
+        nav.classlist.add('recolhido');
+        nav.classlist.remove('expandido');
+    }
 }
