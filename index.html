@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Calculator en ligne | World Moving déménagement</title>
+    <title>Calculateur en ligne | World Moving déménagement</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
@@ -16,13 +16,14 @@
 
 <body>
     <header>
-        <nav>
-            <a href="https://worldmoving.ch/">
-                <img alt="logo L.A Global" src="img/logo 3.png" />
-            </a>
 
-            <img id="img-menu" src="img/menu/menu.png" onclick="togleMenu()">
+        <img id="img-menu" src="img/menu/menu.png" onclick="togleMenu()">
 
+        <a href="https://worldmoving.ch/">
+            <img id="logo" alt="logo World Moving" src="img/logo 3.png" />
+        </a>
+
+        <nav class="recolhido">
             <a href="https://worldmoving.ch/">Accueil</a>
             <a href="https://worldmoving.ch/#apropos">A propos</a>
             <a href="https://worldmoving.ch/#services">Services</a>
@@ -30,16 +31,18 @@
             <a href="https://calculateur.worldmoving.ch">Calculator en ligne</a>
             <a href="https://worldmoving.ch/#contact">Contact</a>
         </nav>
-    </header>
 
-    <div id="poupup">
+    </header> 
+
+      <div id="poupup">
+
         <div>
 
             <a id="x" href="#" onclick="toggle()">X</a>
 
             <form action="envia_fale.php" method="POST" name="form">
                 
-                    <h3> Demande de devis</h3>
+                   <h3> Demande de devis</h3>
 
                     <div id="valores">
                         <div class="textos">
@@ -68,7 +71,8 @@
                     <input id="poupup-endereco2" type="text" name="adresse2" placeholder="Adresse d'arrivée" required maxlength="40">
                     <label for="poupup-data"></label>
                     <input type="date" name="data" id="poupup-data" name="date" placeholder="date du déménagement">
-                    
+                    <label for="poupup-text"></label>
+
                     <input type="number" id="qtdeForm" name="qtdeForm" placeholder="Tapez le nb d'éléments a déménager">
                     <input type="number" id="resultForm" name="resultForm" placeholder="Tapez le volume total">
 
@@ -79,41 +83,48 @@
             </form>
                 
         </div>
+
     </div>
 
-    <main id="area">
+     <main id="area">
 
         <div>
 
-        <div class="'titulos">
-            <h1><span style="color: orangered;">WORLD MOVING</span>, déménagez avec des professionnels!</h1>
-            <h2>Calculez le volume à déménager</h2>
-        </div>
+            <div class="'titulos">
+                <h1><span style="color: orangered;">WORLD MOVING</span>, déménagez avec des professionnels!</h1>
+                <h2>Calculez le volume à déménager</h2>
+            </div>
 
-        <div id="ex">
-            <p id="p1">
-                Cet inventaire vous permet de connaitre le volume à déménager.
-                Si à la place vous préférez rencontrer notre agent chez vous,
-                veuillez nous contacter.
-            </p>
-        </div>
+            <div id="ex">
+                <p id="p1">
+                    Cet inventaire vous permet de connaitre le volume à déménager.
+                    Si à la place vous préférez rencontrer notre agent chez vous,
+                    veuillez nous contacter.
+                </p>
+            </div>
+
         </div>
 
         <section>
+
             <h3>
                 Sélectionnez les éléments que vous souhaitez déménager, 
                 le volume dont vous avez besoin s’affiche ci-dessous.
             </h3>
             <div class="multi-button"></div>
-            <div id="comodos">
+                <div id="comodos">
             </div>
+
         </section>
 
-        <div class="texto">
+       <div class="texto">
+
             <div id="titulo">
                 <h2>Comment ça marche ?</h2>
             </div>
+
         </div>
+
         <div class="texto">
 
             <p id="texto2">
@@ -128,13 +139,14 @@
 
                 Quand votre liste est finalisée, cliquez sur "Valider" pour envoyer un formulaire avec les informations.
 
-            </p>
+            </p></br></br></br></br></br></br>
 
         </div>
 
         <footer class="rodape">
 
-            <div>
+            <div id="info">
+
                 <div>
                     <h3>NB D'ÉLÉMENTS À DÉMÉNAGER:
                         <h3 id="qtde">0</h3>
@@ -153,7 +165,9 @@
                 <a href="#" onclick="toggle()" class="btn btn-white btn-animation-1">VALIDER</a>
             </div>
     
-        </footer>
+        </footer> 
+
+        
     
         <script src='js/calculador.js'></script>
         

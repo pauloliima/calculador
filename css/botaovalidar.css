@@ -128,7 +128,7 @@
 
 form input {
   width: 100%;
-  padding: 10px 5px;
+  padding: 7px 5px;
   margin: 5px 0;
   border: 0;
   border-bottom: 1px solid #999;
@@ -167,11 +167,15 @@ form button{
 @media screen and (max-width: 600px) {
 
   #poupup {
-    width: 380px;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    
   }
 
   #poupup form {
    width: 240px;
+   
   }
  
   #valores{
@@ -180,32 +184,37 @@ form button{
 
   #x {
     color: #ff105f;
-    margin-right: -180px;
+    margin-right: 80px;
   }
 
   footer {
-    height: 100px;
+    height: 80px;
   }
 
-  footer div {
-    width: 100%;
-    Display: flex;
-    flex-direction: row;
-    Justify-content: space-between;
+  footer #info {
+    font-size: xx-small;
+    display: inline;
     color: #777;
     font-style: oblique;
     font-weight: 600;
+    padding: -100px;
   }
 
   footer div.box{
-    Display: flex;
-    flex-direction: column;
-    Justify-content: space-between;
-    margin-bottom: 40px;
+    height: 35px;
+    margin-bottom: 30px;
+    margin-right: -5px;
+    display: flex;
+  }
+
+  footer div.box a {
+    font-size: small;
+    text-align: center;
   }
 
   #texto2 {
     margin-bottom: 100px;
+    text-align: justify;
   }
 }
  

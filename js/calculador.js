@@ -246,17 +246,11 @@ function log(e){
     console.log(document.getElementsByTagName('form')[0])
 }
 
-var expandido = false;
+// var expandido = false;
 
 function togleMenu(){
 
     let nav = document.getElementsByTagName('nav')[0];
+    nav.classList.toggle('recolhido')
 
-    if(expandido){
-        nav.classlist.add('expandido');
-        nav.classlist.remove('recolhido');
-    } else {
-        nav.classlist.add('recolhido');
-        nav.classlist.remove('expandido');
     }
-}

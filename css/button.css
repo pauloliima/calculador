@@ -10,11 +10,6 @@
   --space: 1rem;
 }
 
-* {
-  box-sizing: border-box;
-  transition: ease-in-out 300ms;
-}
-
 .multi-button {
   display: flex;
   flex-wrap: wrap;
@@ -25,9 +20,9 @@
 
 .multi-button button {
   flex: 1;
-  min-width: 132px;
+  min-width: 61px;
   display: flex;
-  width: 20%;
+  width: 30%;
   flex-grow: 1;
   cursor: pointer;
   position: relative;
@@ -40,6 +35,7 @@
   text-transform: uppercase;
   text-shadow: var(--shadow) 1px 1px;
   transition: flex-grow 300ms ease-in-out, background-color 500ms ease;
+  text-align: left;
 }
 .multi-button a {
   text-decoration: none;
