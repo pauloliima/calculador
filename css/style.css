@@ -40,7 +40,7 @@ nav {
   margin-top: -65px;
 }
 
-nav a:not(:first-of-type) {
+nav a{
   color: black;
   font-weight: 500;
   padding: 30px 20px;
@@ -53,8 +53,12 @@ nav a:not(:first-of-type):hover {
   border-bottom: 1px solid orangered;
 }
 
-a {
+a,
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
+  color: initial;
 }
 
 a img {
@@ -253,8 +257,8 @@ nav.recolhido {
 
     nav {
       width: 370px;
-      max-height: 450px;
-      height: 450px;
+      /* height: 450px; */
+      max-height: 100vh;
       margin-top: 0;
     }
 
@@ -269,6 +273,10 @@ nav.recolhido {
       display: initial;
       margin-left: 120px;
       margin-bottom: 15px;
+    }
+
+    .recolhido a{
+      display: none; /* pra corrigir o problema de vizualização do menu no IPhone */
     }
 
     a {
