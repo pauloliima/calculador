@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+#area {
+    padding: 0;
+    text-align: center;
+}
+
+#area > div:first-of-type {
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100vh - (3.4rem + 64px));
+    will-change: scroll-position;
+    /* 
+    |   100vh (viewport height)        
+    |  -1rem (.multi-button button line-height) 
+    |  -1rem (.multi-button buttom padding-top) 
+    |  -1rem (.multi-button buttom padding-botton) 
+    |  -0.2rem (.multi-button button border-top) 
+    |  -0.2rem (.multi-button button border-botton) 
+    |  -0.2rem (safety padding)
+    |  -64px (header heigth))
+    */
+}
+
+#area > div:first-of-type .titulos h1 span {
+    color: #ff4500;
+}
+
+#ex {
+    padding: 0 20px;
+}
+
+section div.multi-button {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: auto;
+    box-shadow: 0px 1px 5px grey;
+    z-index: 10;
+}
+section div.multi-button button {
+    flex: 1;
+    min-width: 61px;
+    display: flex;
+    width: 30%;
+    min-width: 110px;
+    flex-grow: 1;
+    cursor: pointer;
+    position: relative;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    border: 0px solid #d6d6d6;
+    color: #ff4500;
+    background-color: #000000;
+    font-family: Roboto;
+    text-transform: uppercase;
+    text-shadow: rgba(0, 0, 0, 0.1) 1px 1px;
+    transition: flex-grow 300ms ease-in-out, background-color 500ms ease;
+    text-align: left;
+}
+
+div.multi-button button.selected,
+div.multi-button button:hover {
+    outline: none;
+    background-color: #ff4500;
+}
+div.multi-button button.selected {
+    flex-grow: 1.2;
+}
+div.multi-button a {
+    color: #ffffff;
+}
+
+#comodos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article {
+    background-color: #eeeef4;
+    margin: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    min-width: 260px;
+    transition: transform ease-in-out 500ms;
+}
+
+.imagem img {
+    width: 100px;
+    height: 100px;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 1px solid #ddd;
+    display: inline-flex;
+}
+
+.number-input button.plus {
+    height: 20px;
+    background-color: orangered;
+}
+
+.number-input button.down {
+    height: 20px;
+    background-color: gainsboro;
+}
+
+.number-input,
+.number-input * {
+    justify-items: center;
+    align-items: center;
+}
+
+.number-input button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input button:before,
+.number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 0.5rem;
+    height: 1px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+}
+
+.number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.number-input input[type="number"] {
+    font-family: sans-serif;
+    max-width: 2rem;
+    padding: 0.1rem;
+    border: solid #ddd;
+    border-width: 0 1.5px;
+    font-size: 1rem;
+    height: 1rem;
+    text-align: center;
+}
+
+footer {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    display: flex;
+    background-color: #dbc4b2;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    z-index: 11;
+    height: 3.4rem;
+}
+footer > div:first-of-type {
+    /*Texto rodapé*/
+    display: flex;
+    justify-content: space-around;
+    color: #636363;
+    font-size: 15px;
+    flex: 4;
+}
+
+footer > div:first-of-type div {
+    display: flex;
+}
+
+footer div#m {
+    margin-left: 0px;
+    color: orangered;
+}
+
+.texto {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#texto2 {
+    text-indent: 2rem;
+}

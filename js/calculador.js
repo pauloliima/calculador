@@ -75,7 +75,7 @@ var comodos = {
 }
 
 var comodosNames = Object.keys(comodos); // o nome dos cômodos ['salon', 'cuisine'...]
-var currentComodo = comodosNames[0]; // o cômodo atual
+var currentComodo; // o cômodo atual
 var inputs; // os <inputs> dos itens no HTML
 
 /** 
@@ -129,6 +129,9 @@ function calc() {
  * @param {string} comodo - A navegação atual
  */
 function createElements(comodo) {
+    if (this.currentComodo == comodo) {
+        return
+    }
     this.currentComodo = comodo;
     setActiveButton();
     let cm = document.getElementById('comodos');
@@ -230,27 +233,25 @@ function setActiveButton() {
 
 document.onload = (
     createButtons(),
-    createElements(currentComodo)
+    createElements(comodosNames[0])
 );
 
-/* Ativa o poupup ao clicar em valider */
-function toggle(){
+/* Ativa o popup ao clicar em valider */
+function toggle() {
     let blur = document.getElementById('area');
     blur.classList.toggle('active');
-    let poupup = document.getElementById('poupup');
-    poupup.classList.toggle('active');
+    let popup = document.getElementById('popup');
+    popup.classList.toggle('active');
 }
 
 
-function log(e){ 
+function log(e) {
     console.log(document.getElementsByTagName('form')[0])
 }
 
 // var expandido = false;
 
-function togleMenu(){
-
+function togleMenu() {
     let nav = document.getElementsByTagName('nav')[0];
     nav.classList.toggle('recolhido')
-
-    }
+}

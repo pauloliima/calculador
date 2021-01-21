@@ -1,0 +1,67 @@
+@media (max-width: 600px) {
+    header {
+        flex-direction: column-reverse;
+    }
+    header > img:first-of-type {
+        display: initial;
+        min-width: 100%;
+    }
+    header nav.recolhido {
+        max-height: 0px;
+        contain: content;
+    }
+    header nav a {
+        width: 100%;
+    }
+    header nav.recolhido a {
+        opacity: 0;
+    }
+
+    footer > div:first-of-type div {
+        justify-content: center;
+    }
+
+    #popup {
+        margin: 0;
+        padding: 0;
+    }
+
+    #popup,
+    #popup > div {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #popup a {
+        margin: 0;
+        top: 16px;
+        right: 16px;
+    }
+
+    #popup form {
+        width: 100%;
+    }
+
+    #valores {
+        font-size: small;
+    }
+    
+    footer {
+        height: 80px;
+    }
+
+    footer #info {
+        font-size: xx-small;
+        display: inline;
+        color: #777;
+        font-style: oblique;
+        font-weight: 600;
+        padding: -100px;
+    }
+
+    #texto2 {
+        margin-bottom: 100px;
+        text-align: justify;
+    }
+}
